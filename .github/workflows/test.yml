@@ -24,7 +24,7 @@ jobs:
           cp .env.example .env
           php artisan key:generate
         env:
-          API_KEY: ${{ secrets.API_KEY }}
+          API_KEY: ${{ vars.API_KEY }}
 
       - name: Run tests
         run: php artisan test
